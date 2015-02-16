@@ -1,26 +1,29 @@
 /*
  * Copyright (C) 2015  Christopher J. Howard
  *
- * This file is part of CBES.
+ * This file is part of Ecosys.
  *
- * CBES is free software: you can redistribute it and/or modify
+ * Ecosys is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * CBES is distributed in the hope that it will be useful,
+ * Ecosys is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with CBES.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Ecosys.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef COMPONENT_OBSERVER_HPP
-#define COMPONENT_OBSERVER_HPP
+#ifndef ECS_COMPONENT_OBSERVER_HPP
+#define ECS_COMPONENT_OBSERVER_HPP
 
-#include "entity-id.hpp"
+#include <ecosys/entity-id.hpp>
+
+namespace ecs
+{
 
 class Component;
 class ComponentManager;
@@ -66,4 +69,6 @@ private:
 	virtual void componentRemoved(EntityID entity, Component* component) = 0;
 };
 
-#endif // COMPONENT_OBSERVER_HPP
+} // namespace ecs
+
+#endif // ECS_COMPONENT_OBSERVER_HPP
